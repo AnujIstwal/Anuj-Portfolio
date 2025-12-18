@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
+/* =========================
+   Design Tokens
+   ========================= */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* Core colors */
+    --color-bg: #f6f3ee;
+    --color-text: #0c121e;
+    --color-muted: #6f6f6f;
+    --color-border: #e9dfcf;
+
+    /* Accent */
+    --color-accent: #ffaa5a;
+    --color-accent-muted: #ffd9b0;
 }
 
+/* =========================
+   Tailwind Theme Mapping
+   ========================= */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-bg: var(--color-bg);
+    --color-text: var(--color-text);
+    --color-muted: var(--color-muted);
+    --color-border: var(--color-border);
+    --color-accent: var(--color-accent);
+    --color-accent-muted: var(--color-accent-muted);
+
+    /* Fonts */
+    --font-display: var(--font-display);
+    --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* =========================
+   Base Styles
+   ========================= */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+}
+
+.font-display {
+    font-family: var(--font-display);
+    line-height: 0.9em;
+    letter-spacing: -0.02rem;
 }

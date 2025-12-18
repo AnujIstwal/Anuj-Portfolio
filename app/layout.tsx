@@ -6,21 +6,21 @@ import "./globals.css";
 const richmond = localFont({
     src: [
         {
-            path: "../assets/fonts/Richmond-Display-Light.woff2",
+            path: "../public/fonts/Richmond-Display-Light.woff2",
             style: "normal",
         },
         {
-            path: "../assets/fonts/Richmond-Display-Light.woff",
+            path: "../public/fonts/Richmond-Display-Light.woff",
             style: "normal",
         },
     ],
-    variable: "--font-display",
+    variable: "--font-richmond",
     display: "swap",
 });
 
 const manrope = Manrope({
     subsets: ["latin"],
-    variable: "--font-sans",
+    variable: "--font-manrope",
     display: "swap",
 });
 

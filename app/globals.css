@@ -27,8 +27,8 @@
     --color-accent-muted: var(--color-accent-muted);
 
     /* Fonts */
-    --font-display: var(--font-display);
-    --font-sans: var(--font-sans);
+    --font-richmond: var(--font-richmond);
+    --font-manrope: var(--font-manrope);
 }
 
 /* =========================
@@ -37,11 +37,58 @@
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: var(--font-sans);
+    font-family: var(--font-manrope);
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.font-display {
-    font-family: var(--font-display);
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.font-richmond {
+    font-family: var(--font-richmond);
     line-height: 0.9em;
-    letter-spacing: -0.02rem;
+    letter-spacing: -0.03rem;
+}
+
+.section {
+    @apply py-24 md:py-32 w-dvw h-dvh;
+}
+
+.flex-center {
+    @apply flex items-center justify-center;
+}
+
+.bg-app {
+    background-color: var(--color-bg);
+}
+
+/* .text-app {
+    color: var(--color-text);
+} */
+
+.border-app {
+    border-color: var(--color-border);
+}
+
+.hero {
+    height: 100vh;
+}
+
+@media (min-width: 810px) and (max-width: 1199.98px) {
+    .hero {
+        height: 700px;
+    }
 }

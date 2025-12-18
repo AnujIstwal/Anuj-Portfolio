@@ -1,10 +1,13 @@
-import Image from "next/image";
+import Hero from "./sections/hero/Hero";
+import Work from "./sections/work/Work";
+import Subhero from "./sections/Subhero";
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen items-center justify-center bg-bg ">
-            Hello Manrope
-            <h1 className="font-display text-8xl">Anuj you nailed it</h1>
+        <div className="flex flex-col">
+            <Hero />
+            <Subhero />
+            {/* <Work /> */}
         </div>
     );
 }

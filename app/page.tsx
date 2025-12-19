@@ -2,11 +2,13 @@
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Hero from "./sections/hero/Hero";
 import Work from "./sections/Work";
+import Hero from "./sections/Hero";
 import Subhero from "./sections/Subhero";
 import ScrollAnimation from "./sections/ScrollAnimation";
 import Navbar from "./components/Navbar";
+import Philosophy from "./sections/Philosophy";
+import Outcomes from "./sections/Outcomes";
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
       </main>
 
       <Work />
+      <Philosophy />
+      <Outcomes />
     </div>
   );
 }

@@ -4,75 +4,79 @@
    Design Tokens
    ========================= */
 :root {
-    /* Core colors */
-    --color-bg: #f6f3ee;
-    --color-text: #0c121e;
-    --color-muted: #6f6f6f;
-    --color-border: #e9dfcf;
+  /* Core colors */
+  --color-bg: #f6f3ee;
+  --color-text: #0c121e;
+  --color-muted: #6f6f6f;
+  --color-border: #e9dfcf;
 
-    /* Accent */
-    --color-accent: #ffaa5a;
-    --color-accent-muted: #ffd9b0;
+  /* Accent */
+  --color-accent: #ffaa5a;
+  --color-accent-muted: #ffd9b0;
 }
 
 /* =========================
    Tailwind Theme Mapping
    ========================= */
 @theme inline {
-    --color-bg: var(--color-bg);
-    --color-text: var(--color-text);
-    --color-muted: var(--color-muted);
-    --color-border: var(--color-border);
-    --color-accent: var(--color-accent);
-    --color-accent-muted: var(--color-accent-muted);
+  --color-bg: var(--color-bg);
+  --color-text: var(--color-text);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-accent: var(--color-accent);
+  --color-accent-muted: var(--color-accent-muted);
 
-    /* Fonts */
-    --font-richmond: var(--font-richmond);
-    --font-manrope: var(--font-manrope);
+  /* Fonts */
+  --font-richmond: var(--font-richmond);
+  --font-manrope: var(--font-manrope);
 }
 
 /* =========================
    Base Styles
    ========================= */
 body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    font-family: var(--font-manrope);
-    font-size: 14px;
-    padding: 0;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-manrope);
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* * {
+  outline: 1px solid red;
+} */
+
 html {
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 .font-richmond {
-    font-family: var(--font-richmond);
-    line-height: 0.9em;
-    letter-spacing: -0.03rem;
+  font-family: var(--font-richmond);
+  line-height: 0.9em;
+  letter-spacing: -0.03rem;
 }
 
 .section {
-    @apply py-24 md:py-32 w-dvw h-dvh;
+  @apply py-24 md:py-32;
 }
 
 .flex-center {
-    @apply flex items-center justify-center;
+  @apply flex items-center justify-center;
 }
 
 .bg-app {
-    background-color: var(--color-bg);
+  background-color: var(--color-bg);
 }
 
 /* .text-app {
@@ -80,15 +84,15 @@ html {
 } */
 
 .border-app {
-    border-color: var(--color-border);
+  border-color: var(--color-border);
 }
 
 .hero {
-    height: 100vh;
+  height: 100vh;
 }
 
 @media (min-width: 810px) and (max-width: 1199.98px) {
-    .hero {
-        height: 700px;
-    }
+  .hero {
+    height: 700px;
+  }
 }

@@ -1,7 +1,5 @@
 "use client";
 
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import Work from "./sections/Work";
 import Hero from "./sections/Hero";
 import Subhero from "./sections/Subhero";
@@ -9,8 +7,21 @@ import ScrollAnimation from "./sections/ScrollAnimation";
 import Navbar from "./components/Navbar";
 import Philosophy from "./sections/Philosophy";
 import Outcomes from "./sections/Outcomes";
+import Footer from "./sections/Footer";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 export default function Home() {
+  // Default Lenis implementation
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+  //   function raf(time: number) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
+  // }, []);
+
   return (
     <div className="flex w-full flex-col overflow-x-hidden">
       {/* Navbar */}
@@ -25,6 +36,7 @@ export default function Home() {
       <Work />
       <Philosophy />
       <Outcomes />
+      <Footer />
     </div>
   );
 }

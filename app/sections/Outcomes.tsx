@@ -18,7 +18,7 @@ const Outcomes = () => {
   return (
     <section
       id="outcomes"
-      className="flex h-min w-full flex-col items-center px-[50px] pt-[150px] pb-[200px]"
+      className="flex h-min w-full flex-col items-center px-[20px] pt-[150px] pb-[200px] md:px-[50px]"
     >
       <div className="flex h-min max-w-[1000px] flex-col items-center gap-[100px]">
         <div className="flex h-min w-full flex-col items-start gap-[30px] md:flex-row">

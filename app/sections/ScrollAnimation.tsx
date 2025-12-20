@@ -40,7 +40,11 @@ const ScrollAnimation = ({ children }: { children: React.ReactNode }) => {
     { scope: containerRef },
   );
 
-  return <div ref={containerRef}>{children}</div>;
+  return (
+    <div ref={containerRef} className="h-full w-full">
+      {children}
+    </div>
+  );
 };
 
 export default ScrollAnimation;

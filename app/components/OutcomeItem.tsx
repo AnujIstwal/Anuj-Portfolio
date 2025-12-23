@@ -13,7 +13,7 @@ const OutcomeItem = ({ item, isActive, onClick }: Props) => {
   return (
     <div
       onClick={onClick}
-      className="flex h-min w-full cursor-pointer flex-row items-start gap-[30px] transition-all duration-500"
+      className="flex h-min w-full cursor-pointer flex-row items-start gap-[30px]"
     >
       {/* Index */}
       <div className="text-muted w-[30%]">0{item.index}</div>

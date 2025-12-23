@@ -28,3 +28,17 @@ export const outcomes = [
       "Interfaces designed to grow with the product, supporting future features without breaking the experience.",
   },
 ];
+
+// data/projects
+export const projects = [
+  {
+    slug: "zidio-task",
+    title: "Zidio Task Management System",
+    description: "A SaaS task management platform for teams.",
+  },
+  {
+    slug: "travel-for-all",
+    title: "Travel For All",
+    description: "Inclusive travel platform design.",
+  },
+];

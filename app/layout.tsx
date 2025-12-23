@@ -1,4 +1,5 @@
 import gsap from "gsap";
+
 import { ScrollTrigger, SplitText } from "gsap/all";
 import type { Metadata } from "next";
 import localFont from "next/font/local";

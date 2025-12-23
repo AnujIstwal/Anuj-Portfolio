@@ -1,9 +1,28 @@
 import Navbar from "@/app/components/Navbar";
 import Image from "next/image";
+import gsap from "gsap";
+import { useEffect } from "react";
 
 const Hero = () => {
+  useEffect(() => {
+    gsap.to(".hero-image", {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power1.out",
+    });
+
+    gsap.to(".hero-bg-text", {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power1.out",
+      delay: 0.5,
+    });
+  }, []);
+
   return (
-    <section className="hero z-1 flex w-full flex-col">
+    <section className="hero z-1 flex w-full flex-col overflow-hidden">
       {/* HERO CONTENT */}
       <div className="relative z-10 h-full w-full">
         {/* Background Typography */}
@@ -11,10 +30,10 @@ const Hero = () => {
         <Image
           src="/images/bg-text-tight.svg"
           alt="Anuj – UI UX Designer"
-          width={1430}
+          width={1600}
           height={600}
           priority
-          className="absolute top-[72px] left-1/2 mx-auto max-w-[95%] -translate-x-1/2"
+          className="absolute top-[114px] left-1/2 mx-auto w-[95%] -translate-x-1/2"
         />
 
         {/* Hero Image */}
@@ -24,8 +43,8 @@ const Hero = () => {
             alt="Anuj – UI UX Designer"
             width={1160}
             height={1754}
-            priority
-            className="max-w-105"
+            className="hero-image max-w-105 opacity-0"
+            loading="lazy"
           />
         </div>
 

@@ -20,6 +20,7 @@ const ScrollAnimation = ({ children }: { children: React.ReactNode }) => {
         pin: true,
         pinSpacing: false,
         anticipatePin: 1,
+        // markers: true,
       });
 
       // Slide description with delayed feel

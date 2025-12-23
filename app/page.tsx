@@ -3,13 +3,11 @@
 import Work from "./sections/Work";
 import Hero from "./sections/Hero";
 import Subhero from "./sections/Subhero";
-import ScrollAnimation from "./sections/ScrollAnimation";
+import ScrollAnimation from "./util/ScrollAnimation";
 import Navbar from "./components/Navbar";
 import Philosophy from "./sections/Philosophy";
 import Outcomes from "./sections/Outcomes";
 import Footer from "./sections/Footer";
-import { useEffect } from "react";
-import Lenis from "lenis";
 
 export default function Home() {
   // Default Lenis implementation

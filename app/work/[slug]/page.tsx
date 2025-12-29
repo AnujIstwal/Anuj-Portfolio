@@ -1,8 +1,6 @@
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/sections/Footer";
 import { projects } from "@/app/util/data";
-import Head from "next/head";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "../components/Header";
 import ProjectImages from "../components/ProjectImages";
@@ -32,7 +30,7 @@ export default async function ProjectPage({ params }: Props) {
       <Header project={project} />
 
       {/* Project Images */}
-      <ProjectImages />
+      <ProjectImages project={project} />
 
       {/* more projects */}
       <MoreProject />

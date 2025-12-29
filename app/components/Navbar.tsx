@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Navbar() {
   return (
@@ -16,15 +17,15 @@ function Navbar() {
 
       {/* Menu */}
       <nav className="border-app bg-bg/60 flex items-center gap-8 rounded-full border px-4 py-2 text-sm backdrop-blur-md">
-        <a href="#home" className="hover-soft">
+        <Link href="/" className="hover-soft">
           Home
-        </a>
-        <a href="#work" className="hover-soft">
+        </Link>
+        <Link href="/work" className="hover-soft">
           Work
-        </a>
-        <a href="#about" className="hover-soft">
+        </Link>
+        <Link href="/about" className="hover-soft">
           About
-        </a>
+        </Link>
       </nav>
 
       {/* CTA */}

@@ -2,6 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../util/data";
 
+const columns = [
+  { key: "row1", cardClass: "row1-card" },
+  { key: "row2", cardClass: "row2-card" },
+  { key: "row3", cardClass: "row3-card" },
+];
+
 function Work() {
   return (
     <section
@@ -19,6 +25,33 @@ function Work() {
         </div>
 
         <div className="flex h-min w-full flex-col items-center gap-[10px_13px] lg:flex-row">
+          {columns.map((column, colIndex) => (
+            <div
+              key={column.key}
+              className="flex w-full flex-[1_0_0] flex-col items-center gap-[10px] md:flex-row lg:flex-col"
+            >
+              {[0, 1, 2].map((cardIndex) => {
+                const project = projects[colIndex];
+
+                return (
+                  <div key={cardIndex} className={column.cardClass}>
+                    {cardIndex === 0 && project ? (
+                      <Link href={`/work/${project.slug}`}>
+                        <Image
+                          src={project.thumbnail}
+                          alt={`Project ${colIndex + 1}`}
+                          fill
+                          className="project-thumbnail"
+                          priority={colIndex === 0}
+                        />
+                      </Link>
+                    ) : null}
+                  </div>
+                );
+              })}
+            </div>
+          ))}
+          {/* 
           <div className="flex w-full flex-[1_0_0] flex-col items-center gap-[10px] md:flex-row lg:flex-col">
             <div className="row1-card">
               <Link href={`/work/${projects[0].slug}`}>
@@ -59,7 +92,7 @@ function Work() {
             </div>
             <div className="row3-card"></div>
             <div className="row3-card"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

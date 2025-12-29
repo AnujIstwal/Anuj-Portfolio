@@ -64,7 +64,7 @@ html {
 .font-richmond {
   font-family: var(--font-richmond);
   line-height: 0.9em;
-  letter-spacing: -0.03rem;
+  letter-spacing: -0.02em;
 }
 
 .bg-app {
@@ -206,4 +206,12 @@ html {
 
 .project-thumbnail {
   @apply scale-100 rounded-xl object-cover transition-all duration-500 ease-out hover:scale-[102%];
+}
+
+.work-row {
+  @apply flex h-min w-full flex-col items-center justify-center gap-[10px] md:flex-row;
+}
+
+.work-row-card {
+  @apply bg-border aspect-[unset] h-[342px] w-full flex-none rounded-[10px] md:aspect-[1.09816] md:h-auto md:flex-[1_0_0];
 }

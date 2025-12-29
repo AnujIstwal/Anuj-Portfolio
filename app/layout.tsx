@@ -7,6 +7,9 @@ import { Manrope } from "next/font/google";
 import { ReactLenis } from "@/app/util/lenis";
 import "./globals.css";
 
+import ScrollManager from "./components/ScrollManager";
+import InitialScrollSetup from "./components/InitialScrollSetup";
+
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const richmond = localFont({
@@ -46,6 +49,8 @@ export default function RootLayout({
         <body
           className={`${richmond.variable} ${manrope.variable} antialiased`}
         >
+          <InitialScrollSetup />
+          <ScrollManager />
           {children}
         </body>
       </ReactLenis>

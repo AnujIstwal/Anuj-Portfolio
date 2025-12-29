@@ -18,11 +18,11 @@ const Outcomes = () => {
   return (
     <section
       id="outcomes"
-      className="flex h-min w-full flex-col items-center px-[20px] pt-[150px] pb-[200px] md:px-[50px]"
+      className="flex h-min w-full flex-col items-center p-[100px_20px] md:p-[150px_20px_200px]"
     >
       <div className="flex h-min max-w-[1000px] flex-col items-center gap-[100px]">
         <div className="flex h-min w-full flex-col items-start gap-[30px] md:flex-row">
-          <div className="flex w-[30%] items-center overflow-visible pt-[12px]">
+          <div className="flex w-full items-center overflow-visible pt-[12px] md:w-[30%]">
             <p className="text-[17px] font-semibold uppercase">The Outcome.</p>
           </div>
 

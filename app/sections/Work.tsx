@@ -1,3 +1,9 @@
+"use client";
+
+import { useRef } from "react";
+import { useMediaQuery } from "usehooks-ts";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../util/data";
@@ -9,6 +15,38 @@ const columns = [
 ];
 
 function Work() {
+  const gridRef = useRef(null);
+
+  //  detect mobile
+  const isMobile = useMediaQuery("(max-width: 767px)");
+
+  useGSAP(
+    () => {
+      const startValue = isMobile ? "top 90%" : "top 80%";
+      const initialScale = isMobile ? 0.9 : 0.8;
+
+      // Initial state
+      gsap.set(gridRef.current, {
+        scale: initialScale,
+        transformOrigin: "center center",
+      });
+
+      // Scroll animation
+      gsap.to(gridRef.current, {
+        scale: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: gridRef.current,
+          start: startValue,
+          toggleActions: "play none none none",
+          once: true,
+          // markers: true,
+        },
+      });
+    },
+    { scope: gridRef, dependencies: [isMobile] },
+  );
   return (
     <section
       id="work"
@@ -19,12 +57,17 @@ function Work() {
           <div className="w-[60%] text-xl font-semibold whitespace-pre-wrap">
             WORK.
           </div>
-          <div className="flex h-[20px] items-center p-[10px]">
-            Case Studies.
+
+          <div className="flex h-[20px] items-center gap-[5px] p-[10px]">
+            <span className="h-[6px] w-[6px] rounded-full bg-[#c1d9a8]"></span>
+            <p>Case Studies.</p>
           </div>
         </div>
 
-        <div className="flex h-min w-full flex-col items-center gap-[10px_13px] lg:flex-row">
+        <div
+          ref={gridRef}
+          className="project-grid flex h-min w-full flex-col items-center gap-[10px_13px] lg:flex-row"
+        >
           {columns.map((column, colIndex) => (
             <div
               key={column.key}

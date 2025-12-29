@@ -40,11 +40,11 @@ function Subhero() {
   return (
     <section className="subhero bg-bg border-border relative z-2 flex h-min w-full items-center justify-center border-t">
       {/* Subhero content goes here */}
-      <div className="relative flex w-full max-w-400 flex-col-reverse items-start justify-between gap-[24px] overflow-visible px-[20px] py-[50px] pt-[150px] md:flex-row md:px-[50px]">
+      <div className="relative flex w-full max-w-400 flex-col-reverse items-start justify-between gap-x-[24px] gap-y-[40px] overflow-visible p-[50px_20px] md:flex-row md:p-[150px_50px_0]">
         <div className="min-h-min max-w-[800px] md:mb-40">
           <p
             ref={titleRef}
-            className="sub-hero-title font-richmond text-left text-[4.3rem] md:text-[3.75rem] lg:text-[7rem]"
+            className="sub-hero-title font-richmond text-left text-[4.3rem] lg:text-[3.75rem] xl:text-[7rem]"
           >
             I help teams turn complex ideas into simple,clean & usable
             interfaces.

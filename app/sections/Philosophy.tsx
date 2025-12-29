@@ -5,7 +5,7 @@ function Philosophy() {
   return (
     <section
       id="philosophy"
-      className="flex h-min flex-col items-center gap-[10px] px-[20px] pt-[180px]"
+      className="flex h-min flex-col items-center gap-[10px] p-[120px_20px_0] md:p-[180px_20px_0]"
     >
       <div className="flex h-min w-full max-w-[1600px] flex-col items-center gap-[10px]">
         <div className="flex h-min w-full max-w-[450px] flex-col items-center gap-[20px]">

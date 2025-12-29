@@ -7,7 +7,6 @@ import ScrollAnimation from "./util/ScrollAnimation";
 import Navbar from "./components/Navbar";
 import Philosophy from "./sections/Philosophy";
 import Outcomes from "./sections/Outcomes";
-import Footer from "./sections/Footer";
 
 export default function Home() {
   // Default Lenis implementation
@@ -34,7 +33,6 @@ export default function Home() {
       <Work />
       <Philosophy />
       <Outcomes />
-      <Footer />
     </div>
   );
 }

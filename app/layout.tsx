@@ -9,6 +9,7 @@ import "./globals.css";
 
 import ScrollManager from "./components/ScrollManager";
 import InitialScrollSetup from "./components/InitialScrollSetup";
+import Footer from "./sections/Footer";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -52,6 +53,7 @@ export default function RootLayout({
           <InitialScrollSetup />
           <ScrollManager />
           {children}
+          <Footer />
         </body>
       </ReactLenis>
     </html>

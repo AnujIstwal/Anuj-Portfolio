@@ -1,9 +1,64 @@
+"use client";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/all";
+
 import { FiInstagram, FiDribbble, FiLinkedin } from "react-icons/fi";
 import Navbar from "../components/Navbar";
-import Footer from "../sections/Footer";
 import Philosophy from "./components/Philosophy";
 
 export default function About() {
+  useGSAP(() => {
+    const title = `.about-title`;
+    const aboutDesc = `.about-description`;
+
+    const para = new SplitText(aboutDesc, {
+      type: "lines,words,chars",
+    });
+
+    // IMPORTANT: set initial state
+    gsap.set(title, {
+      opacity: 0,
+      y: 30,
+    });
+
+    gsap.to(title, {
+      y: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: "expo.out",
+      delay: 0.2,
+    });
+
+    gsap.set(para.lines, {
+      opacity: 0,
+      y: 30,
+    });
+
+    gsap.to(para.lines, {
+      y: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: "expo.out",
+      stagger: 0.04,
+      delay: 0.2,
+    });
+
+    gsap.set(".extra-data", {
+      y: 40,
+      opacity: 0,
+    });
+
+    gsap.to(".extra-data", {
+      y: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: "expo.out",
+      delay: 1,
+    });
+  });
+
   return (
     <div className="flex w-full flex-col overflow-x-hidden">
       {/* Navbar */}
@@ -13,12 +68,12 @@ export default function About() {
         <div className="flex h-min w-full flex-col items-center">
           <div className="flex h-min w-full max-w-[1600px] items-start px-[20px] pt-[150px] md:px-[50px]">
             <div className="border-border flex h-min flex-[1_0_0] flex-col items-start justify-between gap-y-[25px] border-b pb-[50px] xl:flex-row">
-              <p className="font-richmond text-[3.1rem] md:text-[3.75rem] lg:text-[5rem] xl:text-[6rem]">
+              <p className="about-title font-richmond text-[3.1rem] md:text-[3.75rem] lg:text-[5rem] xl:text-[6rem]">
                 About me.
               </p>
 
               <div className="flex h-auto w-full max-w-[500px] flex-col justify-start xl:w-[25%] xl:pt-[20px]">
-                <p className="text-justify text-left text-sm">
+                <p className="about-description text-justify text-left text-sm">
                   I’m a UI/UX designer focused on building digital products that
                   feel calm, intentional, and easy to use. <br /> <br /> My work
                   lives at the intersection of clarity, structure, and subtle
@@ -31,7 +86,7 @@ export default function About() {
 
         {/* Connect */}
         <section className="flex w-full flex-col items-center justify-between px-[20px] py-16 md:px-[50px] md:py-24">
-          <div className="flex h-min w-full max-w-[800px] flex-col items-start justify-between gap-[40px] md:flex-row md:items-center">
+          <div className="extra-data flex h-min w-full max-w-[800px] flex-col items-start justify-between gap-[40px] md:flex-row md:items-center">
             {/* WHAT I DO */}
             <div className="flex flex-col">
               <h3 className="mb-6 text-[17px] font-bold uppercase">
@@ -96,8 +151,6 @@ export default function About() {
         {/* Philosophy Section */}
         <Philosophy />
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -1,3 +1,9 @@
+"use client";
+
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 type Props = {
   item: {
     id: string;
@@ -10,6 +16,31 @@ type Props = {
 };
 
 const OutcomeItem = ({ item, isActive, onClick }: Props) => {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      if (!contentRef.current) return;
+
+      if (isActive) {
+        gsap.to(contentRef.current, {
+          height: "auto",
+          opacity: 1,
+          duration: 0.6,
+          ease: "power3.out",
+        });
+      } else {
+        gsap.to(contentRef.current, {
+          height: 0,
+          opacity: 0,
+          duration: 0.6,
+          ease: "power3.Out",
+        });
+      }
+    },
+    { dependencies: [isActive] }, //  re-run on toggle
+  );
+
   return (
     <div
       onClick={onClick}
@@ -28,9 +59,9 @@ const OutcomeItem = ({ item, isActive, onClick }: Props) => {
 
           {/* Description (accordion body) */}
           <div
-            className={`overflow-hidden transition-all duration-500 ease-out ${
-              isActive ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-            }`}
+            ref={contentRef}
+            className="overflow-hidden"
+            style={{ height: 0, opacity: 0 }}
           >
             <p className="text-sm">{item.description}</p>
           </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import Navbar from "../components/Navbar";
-import Footer from "../sections/Footer";
 import ProjectGrid from "./components/ProjectGrid";
 import SelectedWork from "./components/SelectedWork";
 
@@ -17,8 +16,6 @@ export default function Work() {
         {/* projects grid */}
         <ProjectGrid />
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -8,7 +8,7 @@ const Hero = () => {
     gsap.to(".hero-image", {
       opacity: 1,
       y: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "power1.out",
     });
 

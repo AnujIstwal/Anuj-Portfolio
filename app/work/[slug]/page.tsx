@@ -34,9 +34,6 @@ export default async function ProjectPage({ params }: Props) {
 
       {/* more projects */}
       <MoreProject />
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }

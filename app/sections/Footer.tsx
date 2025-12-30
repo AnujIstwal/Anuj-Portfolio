@@ -1,57 +1,10 @@
-"use client";
-
-import { useRef } from "react";
-import { useMediaQuery } from "usehooks-ts";
-import { useGSAP } from "@gsap/react";
-import { usePathname } from "next/navigation";
-
-import gsap from "gsap";
-
 import Image from "next/image";
+import Link from "next/link";
 import { FiInstagram, FiDribbble, FiLinkedin } from "react-icons/fi";
 
 const Footer = () => {
-  const footerRef = useRef(null);
-  const pathname = usePathname();
-
-  //  detect mobile
-  const isMobile = useMediaQuery("(max-width: 767px)");
-
-  useGSAP(
-    () => {
-      const startValue = isMobile ? "top 80%" : "top 70%";
-      const initialY = isMobile ? 100 : 180;
-
-      // 🔑 RESET previous GSAP styles
-      gsap.set(footerRef.current, {
-        clearProps: "transform",
-      });
-
-      // Initial state
-      gsap.set(footerRef.current, {
-        y: initialY,
-        willChange: "transform",
-      });
-
-      // Scroll animation
-      gsap.to(footerRef.current, {
-        y: 0,
-        duration: 0.6,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: startValue,
-          toggleActions: "play none none none",
-          once: true,
-          // markers: true,
-        },
-      });
-    },
-    { scope: footerRef, dependencies: [isMobile, pathname] },
-  );
-
   return (
-    <section id="footer" className="overflow-hidden bg-black">
+    <section id="footer" className="bg-black">
       <div className="footer-container relative">
         <div className="relative h-[600px] w-full rounded-tl-[30px] rounded-tr-[30px] bg-black">
           <Image
@@ -72,7 +25,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div ref={footerRef} className="footer-bottom-container">
+        <div className="footer-bottom-container">
           <div className="footer-bottom">
             <div className="footer-bottom-1">
               <div className="flex h-[20px] items-center gap-[5px] p-[10px]">
@@ -98,9 +51,21 @@ const Footer = () => {
               <div>All rights reserved ©2025</div>
               <div className="color-text flex items-center gap-2">
                 <p>Follow: </p>
-                <FiInstagram className="cursor-pointer" />
-                <FiDribbble className="cursor-pointer" />
-                <FiLinkedin className="cursor-pointer" />
+                <Link
+                  href="https://www.instagram.com/uiby.ajistwal/"
+                  target="_blank"
+                >
+                  <FiInstagram className="cursor-pointer" />
+                </Link>
+                <Link href="https://dribbble.com/anujistwal" target="_blank">
+                  <FiDribbble className="cursor-pointer" />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/anuj-kumar-393196200/"
+                  target="_blank"
+                >
+                  <FiLinkedin className="cursor-pointer" />
+                </Link>
               </div>
             </div>
           </div>

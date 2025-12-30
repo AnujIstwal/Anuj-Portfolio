@@ -1,5 +1,4 @@
 import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/sections/Footer";
 import { projects } from "@/app/util/data";
 import { notFound } from "next/navigation";
 import Header from "../components/Header";
@@ -22,7 +21,7 @@ export default async function ProjectPage({ params }: Props) {
   }
 
   return (
-    <div className="flex w-full flex-col items-center overflow-x-hidden">
+    <div className="flex w-full flex-col items-center">
       {/* Navbar */}
       <Navbar />
 

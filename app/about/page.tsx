@@ -7,6 +7,7 @@ import { SplitText } from "gsap/all";
 import { FiInstagram, FiDribbble, FiLinkedin } from "react-icons/fi";
 import Navbar from "../components/Navbar";
 import Philosophy from "./components/Philosophy";
+import Link from "next/link";
 
 export default function About() {
   useGSAP(() => {
@@ -110,38 +111,41 @@ export default function About() {
               <ul className="space-y-5">
                 <li className="flex items-center gap-4">
                   <span className="flex h-8 w-8 items-center justify-center rounded border border-[#0c121e]/20">
-                    <FiInstagram size={16} strokeWidth={1.5} />
+                    <FiLinkedin size={16} strokeWidth={1.5} />
                   </span>
-                  <a
-                    href="https://instagram.com/anujistwal"
+                  <Link
+                    href="https://www.linkedin.com/in/anuj-kumar-393196200/"
                     className="text-sm text-[#0c121e]/80 hover:text-[#0c121e] hover:underline"
+                    target="_blank"
                   >
-                    insta/anujistwal
-                  </a>
+                    linkedin/anuj-kumar
+                  </Link>
                 </li>
 
                 <li className="flex items-center gap-4">
                   <span className="flex h-8 w-8 items-center justify-center rounded border border-[#0c121e]/20">
                     <FiDribbble size={16} strokeWidth={1.5} />
                   </span>
-                  <a
+                  <Link
                     href="https://dribbble.com/anujistwal"
                     className="text-sm text-[#0c121e]/80 hover:text-[#0c121e] hover:underline"
+                    target="_blank"
                   >
                     dribbble/anujistwal
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="flex items-center gap-4">
                   <span className="flex h-8 w-8 items-center justify-center rounded border border-[#0c121e]/20">
-                    <FiLinkedin size={16} strokeWidth={1.5} />
+                    <FiInstagram size={16} strokeWidth={1.5} />
                   </span>
-                  <a
-                    href="https://linkedin.com/in/anuj-kumar"
+                  <Link
+                    href="https://www.instagram.com/uiby.ajistwal/"
                     className="text-sm text-[#0c121e]/80 hover:text-[#0c121e] hover:underline"
+                    target="_blank"
                   >
-                    linkedin/anuj-kumar
-                  </a>
+                    insta/anujistwal
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -40,9 +40,10 @@ const Footer = () => {
 
               {/* CTA */}
               <div className="h-[30px] w-auto">
-                <button className="border-app bg-bg/60 filter:backdrop-blur-md rounded-full border px-4 py-2">
-                  Collaborate
-                </button>
+                <div className="border-app bg-bg/60 flex cursor-pointer items-center justify-center gap-[5px] rounded-full border px-4 py-2 backdrop-blur-md">
+                  <span className="bg-accent h-[5px] w-[5px] rounded-full"></span>
+                  <p>Collaborate</p>
+                </div>
               </div>
             </div>
 

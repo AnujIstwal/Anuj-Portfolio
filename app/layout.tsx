@@ -10,6 +10,7 @@ import "./globals.css";
 import ScrollManager from "./components/ScrollManager";
 import InitialScrollSetup from "./components/InitialScrollSetup";
 import Footer from "./sections/Footer";
+import Navbar from "./components/Navbar";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -52,6 +53,7 @@ export default function RootLayout({
         >
           <InitialScrollSetup />
           <ScrollManager />
+          <Navbar />
           {children}
           <Footer />
         </body>

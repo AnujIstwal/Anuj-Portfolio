@@ -11,6 +11,7 @@ import ScrollManager from "./components/ScrollManager";
 import InitialScrollSetup from "./components/InitialScrollSetup";
 import Footer from "./sections/Footer";
 import Navbar from "./components/Navbar";
+import ProjectCursor from "./components/ProjectCursor";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -51,8 +52,12 @@ export default function RootLayout({
         <body
           className={`${richmond.variable} ${manrope.variable} antialiased`}
         >
+          {/* util */}
           <InitialScrollSetup />
           <ScrollManager />
+          <ProjectCursor />
+
+          {/* content */}
           <Navbar />
           {children}
           <Footer />

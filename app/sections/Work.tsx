@@ -7,6 +7,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../util/data";
+import ExploreProjectChip from "../components/ExploreProjectChip";
 
 const columns = [
   { key: "row1", cardClass: "row1-card" },
@@ -19,6 +20,8 @@ function Work() {
 
   //  detect mobile
   const isMobile = useMediaQuery("(max-width: 767px)");
+
+  const isMedium = useMediaQuery("(max-width: 1024px)");
 
   useGSAP(
     () => {
@@ -77,14 +80,42 @@ function Work() {
                 const project = projects[colIndex];
 
                 return (
-                  <div key={cardIndex} className={column.cardClass}>
+                  <div
+                    key={cardIndex}
+                    className={`${column.cardClass} ${!isMedium ? "cursor-none" : ""}`}
+                    onMouseEnter={() => {
+                      if (isMedium) return;
+
+                      gsap.to(".project-cursor", {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.25,
+                        ease: "power3.out",
+                      });
+                    }}
+                    onMouseLeave={() => {
+                      if (isMedium) return;
+
+                      gsap.to(".project-cursor", {
+                        opacity: 0,
+                        scale: 0.95,
+                        duration: 0.2,
+                        ease: "power2.in",
+                      });
+                    }}
+                  >
+                    {isMedium ? <ExploreProjectChip /> : null}
+
                     {cardIndex === 0 && project ? (
-                      <Link href={`/work/${project.slug}`}>
+                      <Link
+                        href={`/work/${project.slug}`}
+                        className="cursor-none"
+                      >
                         <Image
                           src={project.thumbnail}
                           alt={`Project ${colIndex + 1}`}
                           fill
-                          className="project-thumbnail"
+                          className="project-thumbnail z-40"
                           priority={colIndex === 0}
                         />
                       </Link>
@@ -94,48 +125,6 @@ function Work() {
               })}
             </div>
           ))}
-          {/* 
-          <div className="flex w-full flex-[1_0_0] flex-col items-center gap-[10px] md:flex-row lg:flex-col">
-            <div className="row1-card">
-              <Link href={`/work/${projects[0].slug}`}>
-                <Image
-                  src="/images/project1.png"
-                  alt="Project 1"
-                  fill
-                  className="project-thumbnail"
-                  priority
-                />
-              </Link>
-            </div>
-            <div className="row1-card"></div>
-            <div className="row1-card"></div>
-          </div>
-          <div className="flex w-full flex-[1_0_0] flex-col items-center gap-[10px] md:flex-row lg:flex-col">
-            <div className="row2-card">
-              <Image
-                src="/images/project2.png"
-                alt="Project 2"
-                fill
-                className="project-thumbnail"
-                priority
-              />
-            </div>
-            <div className="row2-card"></div>
-            <div className="row2-card"></div>
-          </div>
-          <div className="flex w-full flex-[1_0_0] flex-col items-center gap-[10px] md:flex-row lg:flex-col">
-            <div className="row3-card">
-              <Image
-                src="/images/project3.png"
-                alt="Project 3"
-                fill
-                className="project-thumbnail"
-                priority
-              />
-            </div>
-            <div className="row3-card"></div>
-            <div className="row3-card"></div>
-          </div> */}
         </div>
       </div>
     </section>

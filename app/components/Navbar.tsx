@@ -69,10 +69,13 @@ function Navbar() {
 
         {/* CTA */}
         <div className="hidden flex-[1_0_0] items-center justify-end md:flex">
-          <div className="border-app bg-bg/60 flex cursor-pointer items-center gap-[6px] rounded-full border px-4 py-2 backdrop-blur-md">
+          <Link
+            href="/collaborate"
+            className="border-app bg-bg/60 flex cursor-pointer items-center gap-[6px] rounded-full border px-4 py-2 backdrop-blur-md"
+          >
             <span className="bg-accent h-[5px] w-[5px] rounded-full"></span>
             <p>Collaborate</p>
-          </div>
+          </Link>
         </div>
 
         <div className="flex flex-[1_0_0] items-center justify-end md:hidden">
@@ -90,10 +93,13 @@ function Navbar() {
               )}
             </button>
 
-            <div className="border-app bg-bg/60 flex cursor-pointer items-center gap-[6px] rounded-full border px-4 py-2 backdrop-blur-md">
+            <Link
+              href="/collaborate"
+              className="border-app bg-bg/60 flex cursor-pointer items-center gap-[6px] rounded-full border px-4 py-2 backdrop-blur-md"
+            >
               <span className="bg-accent h-[5px] w-[5px] rounded-full"></span>
               <p>Collaborate</p>
-            </div>
+            </Link>
           </div>
         </div>
       </header>

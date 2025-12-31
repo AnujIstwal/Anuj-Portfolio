@@ -1,24 +1,37 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import gsap from "gsap";
 
 export default function ProjectCursor() {
   const cursorRef = useRef<HTMLDivElement | null>(null);
+  const pathname = usePathname();
+  console.log("pathname", pathname);
 
   useEffect(() => {
-    const moveCursor = (e: MouseEvent) => {
+    if ("ontouchstart" in window) return; // disable on touch
+
+    const move = (e: MouseEvent) => {
       gsap.to(cursorRef.current, {
-        x: e.clientX + 12,
-        y: e.clientY + 12,
-        duration: 0.3,
+        x: e.clientX + 14,
+        y: e.clientY + 14,
+        duration: 0.35,
         ease: "power3.out",
       });
     };
 
-    window.addEventListener("mousemove", moveCursor);
-    return () => window.removeEventListener("mousemove", moveCursor);
+    window.addEventListener("mousemove", move);
+    return () => window.removeEventListener("mousemove", move);
   }, []);
+
+  // 🔑 RESET ON ROUTE CHANGE
+  useEffect(() => {
+    gsap.set(cursorRef.current, {
+      opacity: 0,
+      scale: 0.95,
+    });
+  }, [pathname]);
 
   return (
     <div

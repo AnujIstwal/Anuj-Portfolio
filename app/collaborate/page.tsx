@@ -1,12 +1,55 @@
+"use client";
+
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function CollaboratePage() {
+  const headerRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        defaults: {
+          duration: 1,
+          ease: "power3.out",
+        },
+      });
+
+      tl.from(headerRef.current, {
+        y: 30,
+        opacity: 0,
+      })
+        .from(
+          contactRef.current,
+          {
+            y: 30,
+            opacity: 0,
+          },
+          "-=0.4",
+        )
+        .from(
+          formRef.current,
+          {
+            y: 30,
+            opacity: 0,
+          },
+          "-=0.3",
+        );
+    },
+    { scope: headerRef }, // GSAP auto-cleanup
+  );
+
   return (
-    <main className="bg-bg min-h-screen px-[20px]">
-      <section className="mx-auto max-w-[1200px] pt-[120px] pb-[80px]">
+    <main className="bg-bg h-min px-[20px]">
+      <section className="mx-auto max-w-[800px] pt-[120px] pb-[100px]">
         {/* Header */}
-        <div className="mb-[80px] text-center">
-          <h1 className="font-richmond text-[4rem] leading-[1]">
+        <div ref={headerRef} className="mb-[80px] text-center">
+          <h1 className="font-richmond text-[2.88rem] md:text-[3.6rem] lg:text-[4.5rem]">
             Let’s build something meaningful.
           </h1>
 
@@ -16,19 +59,18 @@ export default function CollaboratePage() {
         </div>
 
         {/* Content */}
-        <div className="grid max-w-[1200px] grid-cols-1 md:grid-cols-2">
+        <div className="mx-auto flex max-w-[800px] flex-col gap-[80px] md:flex-row md:items-start">
           {/* Contact info */}
-          <div>
+          <div ref={contactRef} className="md:w-1/2">
             <h2 className="mb-[20px] text-sm font-semibold tracking-wide uppercase">
               Contact
             </h2>
 
-            <ul className="space-y-[12px]">
+            <ul className="space-y-[20px]">
               <li className="flex items-center gap-[12px]">
                 <span className="flex h-8 w-8 items-center justify-center rounded border border-[#0c121e]/20">
                   <Phone size={16} strokeWidth={1.5} />
                 </span>
-
                 <span>+91 89680 59548</span>
               </li>
 
@@ -36,7 +78,6 @@ export default function CollaboratePage() {
                 <span className="flex h-8 w-8 items-center justify-center rounded border border-[#0c121e]/20">
                   <Mail size={16} strokeWidth={1.5} />
                 </span>
-
                 <span>anujistwal80@gmail.com</span>
               </li>
 
@@ -44,14 +85,14 @@ export default function CollaboratePage() {
                 <span className="flex h-8 w-8 items-center justify-center rounded border border-[#0c121e]/20">
                   <MapPin size={16} strokeWidth={1.5} />
                 </span>
-
                 <span>Haryana, India</span>
               </li>
             </ul>
           </div>
 
           {/* Form */}
-          <form className="space-y-[32px]">
+          <form ref={formRef} className="w-full max-w-[500px] space-y-[32px]">
+            {/* inputs */}
             <div>
               <label className="block text-sm">Name</label>
               <input

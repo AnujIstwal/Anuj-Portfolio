@@ -50,6 +50,29 @@ function Work() {
     },
     { scope: gridRef, dependencies: [isMobile] },
   );
+
+  const customCursorEnter = () => {
+    if (isMedium) return;
+
+    gsap.to(".project-cursor", {
+      opacity: 1,
+      scale: 1,
+      duration: 0.25,
+      ease: "power3.out",
+    });
+  };
+
+  const customCursorLeave = () => {
+    if (isMedium) return;
+
+    gsap.to(".project-cursor", {
+      opacity: 0,
+      scale: 0.95,
+      duration: 0.2,
+      ease: "power2.in",
+    });
+  };
+
   return (
     <section
       id="work"
@@ -74,52 +97,34 @@ function Work() {
           {columns.map((column, colIndex) => (
             <div
               key={column.key}
-              className="flex w-full flex-[1_0_0] flex-col items-center gap-[10px] md:flex-row lg:flex-col"
+              className="relative flex w-full flex-[1_0_0] flex-col items-center gap-[10px] md:flex-row lg:flex-col"
             >
               {[0, 1, 2].map((cardIndex) => {
-                const project = projects[colIndex];
+                const projectIndex = colIndex * 3 + cardIndex;
+                const project = projects[projectIndex];
+
+                if (!project) return null;
 
                 return (
                   <div
-                    key={cardIndex}
+                    key={`${column.key}-${cardIndex}`}
                     className={`${column.cardClass} ${!isMedium ? "cursor-none" : ""}`}
-                    onMouseEnter={() => {
-                      if (isMedium) return;
-
-                      gsap.to(".project-cursor", {
-                        opacity: 1,
-                        scale: 1,
-                        duration: 0.25,
-                        ease: "power3.out",
-                      });
-                    }}
-                    onMouseLeave={() => {
-                      if (isMedium) return;
-
-                      gsap.to(".project-cursor", {
-                        opacity: 0,
-                        scale: 0.95,
-                        duration: 0.2,
-                        ease: "power2.in",
-                      });
-                    }}
+                    onMouseEnter={customCursorEnter}
+                    onMouseLeave={customCursorLeave}
                   >
-                    {isMedium ? <ExploreProjectChip /> : null}
+                    {isMedium && <ExploreProjectChip />}
 
-                    {cardIndex === 0 && project ? (
-                      <Link
-                        href={`/work/${project.slug}`}
-                        className="cursor-none"
-                      >
-                        <Image
-                          src={project.thumbnail}
-                          alt={`Project ${colIndex + 1}`}
-                          fill
-                          className="project-thumbnail z-40"
-                          priority={colIndex === 0}
-                        />
-                      </Link>
-                    ) : null}
+                    <Link
+                      href={`/work/${project.slug}`}
+                      className="cursor-none"
+                    >
+                      <Image
+                        src={project.thumbnail}
+                        alt={project.title}
+                        fill
+                        className="project-thumbnail z-40"
+                      />
+                    </Link>
                   </div>
                 );
               })}

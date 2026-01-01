@@ -134,4 +134,167 @@ export const projects = [
     final_thoughts:
       "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
   },
+
+  {
+    projectNo: 4,
+    slug: "x1-studio",
+    title: "X1 Studio",
+    description: "Creative agency website redesign.",
+    thumbnail: "/images/projects/project4/thumbnail.png",
+
+    header_details: {
+      overview:
+        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
+      role: "UI/UX software design",
+      platform: "Marketing Website",
+      duration: "2 weeks",
+    },
+
+    mid_section_details: {
+      challenge:
+        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+      approach:
+        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+      outcome:
+        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+    },
+
+    final_thoughts:
+      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+  },
+  {
+    projectNo: 5,
+    slug: "ar-vr",
+    title: "AR/VR Experience",
+    description: "Creative agency website redesign.",
+    thumbnail: "/images/projects/project5/thumbnail.png",
+
+    header_details: {
+      overview:
+        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
+      role: "UI/UX software design",
+      platform: "Marketing Website",
+      duration: "2 weeks",
+    },
+
+    mid_section_details: {
+      challenge:
+        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+      approach:
+        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+      outcome:
+        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+    },
+
+    final_thoughts:
+      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+  },
+  {
+    projectNo: 6,
+    slug: "x1-studio",
+    title: "X1 Studio",
+    description: "Creative agency website redesign.",
+    thumbnail: "/images/projects/project6/thumbnail.png",
+
+    header_details: {
+      overview:
+        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
+      role: "UI/UX software design",
+      platform: "Marketing Website",
+      duration: "2 weeks",
+    },
+
+    mid_section_details: {
+      challenge:
+        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+      approach:
+        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+      outcome:
+        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+    },
+
+    final_thoughts:
+      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+  },
+  {
+    projectNo: 7,
+    slug: "x1-studio",
+    title: "X1 Studio",
+    description: "Creative agency website redesign.",
+    thumbnail: "/images/projects/project7/thumbnail.png",
+
+    header_details: {
+      overview:
+        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
+      role: "UI/UX software design",
+      platform: "Marketing Website",
+      duration: "2 weeks",
+    },
+
+    mid_section_details: {
+      challenge:
+        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+      approach:
+        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+      outcome:
+        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+    },
+
+    final_thoughts:
+      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+  },
+  {
+    projectNo: 8,
+    slug: "x1-studio",
+    title: "X1 Studio",
+    description: "Creative agency website redesign.",
+    thumbnail: "/images/projects/project6/thumbnail.png",
+
+    header_details: {
+      overview:
+        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
+      role: "UI/UX software design",
+      platform: "Marketing Website",
+      duration: "2 weeks",
+    },
+
+    mid_section_details: {
+      challenge:
+        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+      approach:
+        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+      outcome:
+        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+    },
+
+    final_thoughts:
+      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+  },
+  {
+    projectNo: 9,
+    slug: "x1-studio",
+    title: "X1 Studio",
+    description: "Creative agency website redesign.",
+    thumbnail: "/images/projects/project6/thumbnail.png",
+
+    header_details: {
+      overview:
+        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
+      role: "UI/UX software design",
+      platform: "Marketing Website",
+      duration: "2 weeks",
+    },
+
+    mid_section_details: {
+      challenge:
+        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+      approach:
+        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+      outcome:
+        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+    },
+
+    final_thoughts:
+      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+  },
 ];

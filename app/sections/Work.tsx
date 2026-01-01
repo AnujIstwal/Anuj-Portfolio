@@ -17,11 +17,13 @@ const columns = [
 
 function Work() {
   const gridRef = useRef(null);
+  const isMobile = useMediaQuery("(max-width: 767px)", {
+    initializeWithValue: false,
+  });
 
-  //  detect mobile
-  const isMobile = useMediaQuery("(max-width: 767px)");
-
-  const isMedium = useMediaQuery("(max-width: 1024px)");
+  const isMedium = useMediaQuery("(max-width: 1024px)", {
+    initializeWithValue: false,
+  });
 
   useGSAP(
     () => {

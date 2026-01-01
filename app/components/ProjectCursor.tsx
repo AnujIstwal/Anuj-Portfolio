@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import gsap from "gsap";
 
 export default function ProjectCursor() {
+  const [mounted, setMounted] = useState(false);
+
   const cursorRef = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname();
   console.log("pathname", pathname);

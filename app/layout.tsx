@@ -1,30 +1,16 @@
-import gsap from "gsap";
-
-import { ScrollTrigger, SplitText } from "gsap/all";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Manrope } from "next/font/google";
-import { ReactLenis } from "@/app/util/lenis";
 import "./globals.css";
 
-import ScrollManager from "./components/ScrollManager";
-import InitialScrollSetup from "./components/InitialScrollSetup";
-import Footer from "./sections/Footer";
+import ClientRoot from "./components/ClientRoot";
 import Navbar from "./components/Navbar";
-import ProjectCursor from "./components/ProjectCursor";
-
-gsap.registerPlugin(ScrollTrigger, SplitText);
+import Footer from "./sections/Footer";
 
 const richmond = localFont({
   src: [
-    {
-      path: "../public/fonts/Richmond-Display-Light.woff2",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Richmond-Display-Light.woff",
-      style: "normal",
-    },
+    { path: "../public/fonts/Richmond-Display-Light.woff2" },
+    { path: "../public/fonts/Richmond-Display-Light.woff" },
   ],
   variable: "--font-richmond",
   display: "swap",
@@ -43,26 +29,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <ReactLenis root>
-        <body
-          className={`${richmond.variable} ${manrope.variable} antialiased`}
-        >
-          {/* util */}
-          <InitialScrollSetup />
-          <ScrollManager />
-          <ProjectCursor />
+      <body className={`${richmond.variable} ${manrope.variable} antialiased`}>
+        <ClientRoot />
 
-          {/* content */}
-          <Navbar />
-          {children}
-          <Footer />
-        </body>
-      </ReactLenis>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

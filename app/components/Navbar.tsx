@@ -54,6 +54,7 @@ function Navbar() {
             alt="Anuj logo"
             width={72}
             height={72}
+            className="h-auto"
             priority
           />
         </div>
@@ -109,7 +110,7 @@ function Navbar() {
         ref={menuRef}
         className="pointer-events-none fixed top-[78px] left-0 z-40 w-full px-[20px] opacity-0 md:hidden"
       >
-        <div className="border-app bg-bg/80 rounded-[15px] border-[.5] px-[15px] py-[20px] backdrop-blur-xl">
+        <div className="border-app bg-bg/80 rounded-[15px] border-[.5] px-[15px] py-[20px]">
           <nav className="flex flex-col items-center gap-6 text-sm">
             <Link href="/" onClick={() => setOpen(false)}>
               Home

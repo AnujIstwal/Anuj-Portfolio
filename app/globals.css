@@ -203,7 +203,7 @@ html {
 }
 
 .project-thumbnail {
-  @apply scale-100 rounded-xl object-cover grayscale-100 transition-all duration-500 ease-out hover:scale-[102%] hover:grayscale-0;
+  @apply scale-100 rounded-xl object-cover grayscale-0 transition-all duration-500 ease-out hover:scale-[102%] hover:grayscale-0 lg:grayscale-100;
 }
 
 .work-row {

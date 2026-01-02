@@ -248,7 +248,7 @@ export const projects = [
     slug: "x1-studio",
     title: "X1 Studio",
     description: "Creative agency website redesign.",
-    thumbnail: "/images/projects/project6/thumbnail.png",
+    thumbnail: "/images/projects/project8/thumbnail.png",
 
     header_details: {
       overview:
@@ -275,7 +275,7 @@ export const projects = [
     slug: "x1-studio",
     title: "X1 Studio",
     description: "Creative agency website redesign.",
-    thumbnail: "/images/projects/project6/thumbnail.png",
+    thumbnail: "/images/projects/project9/thumbnail.png",
 
     header_details: {
       overview:

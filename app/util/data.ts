@@ -137,8 +137,8 @@ export const projects = [
 
   {
     projectNo: 4,
-    slug: "x1-studio",
-    title: "X1 Studio",
+    slug: "ar-vr",
+    title: "AR/VR Experience",
     description: "Creative agency website redesign.",
     thumbnail: "/images/projects/project4/thumbnail.png",
 
@@ -164,8 +164,8 @@ export const projects = [
   },
   {
     projectNo: 5,
-    slug: "ar-vr",
-    title: "AR/VR Experience",
+    slug: "homio-estate",
+    title: "Homio Estate",
     description: "Creative agency website redesign.",
     thumbnail: "/images/projects/project5/thumbnail.png",
 
@@ -191,8 +191,8 @@ export const projects = [
   },
   {
     projectNo: 6,
-    slug: "x1-studio",
-    title: "X1 Studio",
+    slug: "hireloom",
+    title: "Hireloom",
     description: "Creative agency website redesign.",
     thumbnail: "/images/projects/project6/thumbnail.png",
 
@@ -218,8 +218,8 @@ export const projects = [
   },
   {
     projectNo: 7,
-    slug: "x1-studio",
-    title: "X1 Studio",
+    slug: "homio",
+    title: "Homio",
     description: "Creative agency website redesign.",
     thumbnail: "/images/projects/project7/thumbnail.png",
 

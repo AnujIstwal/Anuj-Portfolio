@@ -245,8 +245,8 @@ export const projects = [
   },
   {
     projectNo: 8,
-    slug: "x1-studio",
-    title: "X1 Studio",
+    slug: "rail-yatri",
+    title: "Rail Yatri",
     description: "Creative agency website redesign.",
     thumbnail: "/images/projects/project8/thumbnail.png",
 
@@ -272,8 +272,8 @@ export const projects = [
   },
   {
     projectNo: 9,
-    slug: "x1-studio",
-    title: "X1 Studio",
+    slug: "glassdoor",
+    title: "Glassdoor",
     description: "Creative agency website redesign.",
     thumbnail: "/images/projects/project9/thumbnail.png",
 

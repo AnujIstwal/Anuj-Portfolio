@@ -114,8 +114,11 @@ function Work() {
                     onMouseEnter={customCursorEnter}
                     onMouseLeave={customCursorLeave}
                   >
-                    {isMedium && <ExploreProjectChip />}
-
+                    {isMedium && (
+                      <Link href={`/work/${project.slug}`}>
+                        <ExploreProjectChip />
+                      </Link>
+                    )}
                     <Link
                       href={`/work/${project.slug}`}
                       className="cursor-none"

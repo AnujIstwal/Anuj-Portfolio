@@ -139,162 +139,159 @@ export const projects = [
     projectNo: 4,
     slug: "ar-vr",
     title: "AR/VR Experience",
-    description: "Creative agency website redesign.",
+    description: "A modern app for augmented and virtual reality experiences.",
     thumbnail: "/images/projects/project4/thumbnail.png",
 
     header_details: {
       overview:
-        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
-      role: "UI/UX software design",
-      platform: "Marketing Website",
-      duration: "2 weeks",
+        "AR/VR Experience is an immersive application designed to showcase augmented and virtual reality use cases in an intuitive and accessible way. The project focuses on helping users explore interactive environments without friction, even if they are new to AR/VR technology.",
+      role: "UI/UX Design",
+      platform: "Mobile Application",
+      duration: "3 weeks",
     },
 
     mid_section_details: {
       challenge:
-        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+        "Designing complex immersive interactions while keeping navigation simple and preventing user disorientation.",
       approach:
-        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+        "Focused on minimal UI overlays, clear onboarding cues, and spatial hierarchy to guide users naturally through the experience.",
       outcome:
-        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+        "The final experience feels intuitive and immersive, allowing users to engage with AR/VR content confidently without feeling overwhelmed.",
     },
 
     final_thoughts:
-      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+      "This project highlighted the importance of restraint in immersive design. Letting the experience speak, while subtly guiding the user, made the interaction feel natural and engaging.",
   },
   {
     projectNo: 5,
     slug: "homio-estate",
     title: "Homio Estate",
-    description: "Creative agency website redesign.",
+    description: "A modern way of buying and selling properties.",
     thumbnail: "/images/projects/project5/thumbnail.png",
-
     header_details: {
       overview:
-        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
-      role: "UI/UX software design",
-      platform: "Marketing Website",
+        "Homio Estate is a real estate platform designed to simplify the process of buying and selling properties. The focus was on creating trust, clarity, and ease of decision-making for users browsing property listings.",
+      role: "UI/UX Design",
+      platform: "Web Application",
       duration: "2 weeks",
     },
 
     mid_section_details: {
       challenge:
-        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+        "Presenting large amounts of property data while keeping the interface approachable and not overwhelming for users.",
       approach:
-        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+        "Designed clean property cards, clear visual hierarchy, and strong imagery to balance information with emotional appeal.",
       outcome:
-        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+        "Users can scan, compare, and shortlist properties easily, making the browsing experience feel confident and stress-free.",
     },
 
     final_thoughts:
-      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+      "Homio Estate reinforced how clarity and trust-driven design play a crucial role in real estate experiences, where users make high-stakes decisions.",
   },
   {
     projectNo: 6,
-    slug: "hireloom",
-    title: "Hireloom",
-    description: "Creative agency website redesign.",
+    slug: "heirloom",
+    title: "Heirloom",
+    description: "A mobile app for preserving memories and meaningful moments.",
     thumbnail: "/images/projects/project6/thumbnail.png",
 
     header_details: {
       overview:
-        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
-      role: "UI/UX software design",
-      platform: "Marketing Website",
+        "Heirloom is a mobile application designed to help people preserve personal memories, stories, and moments in a thoughtful and lasting way. The project focuses on creating an emotionally safe and simple space where users can document what matters most.",
+      role: "UI/UX Design",
+      platform: "Mobile Application",
       duration: "2 weeks",
     },
 
     mid_section_details: {
       challenge:
-        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+        "Designing an emotionally driven product without making the interface feel heavy or intrusive.",
       approach:
-        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+        "Focused on calm visuals, soft typography, and frictionless flows to encourage reflection and natural storytelling.",
       outcome:
-        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+        "The final experience feels warm and personal, allowing users to capture memories effortlessly without feeling guided or rushed.",
     },
 
     final_thoughts:
-      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+      "Heirloom reinforced the idea that emotional products benefit from quiet design decisions. By prioritizing simplicity and sensitivity, the interface supports the story rather than competing with it.",
   },
   {
     projectNo: 7,
     slug: "homio",
     title: "Homio",
-    description: "Creative agency website redesign.",
+    description: "A webapp for managing smart home devices.",
     thumbnail: "/images/projects/project7/thumbnail.png",
-
     header_details: {
       overview:
-        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
-      role: "UI/UX software design",
-      platform: "Marketing Website",
-      duration: "2 weeks",
+        "Homio is a smart home management web app that allows users to control and monitor connected devices from a single dashboard. The goal was to make smart living feel simple and reliable.",
+      role: "UI/UX Design",
+      platform: "Web Application",
+      duration: "3 weeks",
     },
 
     mid_section_details: {
       challenge:
-        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+        "Managing multiple devices and controls without creating cognitive overload for users.",
       approach:
-        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+        "Introduced a clear dashboard structure, logical grouping of devices, and familiar interaction patterns for quick control.",
       outcome:
-        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+        "Users can manage their smart home efficiently, with reduced friction and improved clarity across everyday actions.",
     },
 
     final_thoughts:
-      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+      "This project emphasized the importance of predictability and clarity in utility-driven products where speed and reliability matter most.",
   },
   {
     projectNo: 8,
     slug: "rail-yatri",
     title: "Rail Yatri",
-    description: "Creative agency website redesign.",
+    description: "A travel app for elderly users.",
     thumbnail: "/images/projects/project8/thumbnail.png",
-
     header_details: {
       overview:
-        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
-      role: "UI/UX software design",
-      platform: "Marketing Website",
+        "Rail Yatri is a travel application designed specifically for elderly users, focusing on accessibility, clarity, and comfort throughout the journey planning process.",
+      role: "UI/UX Design",
+      platform: "Mobile Application",
       duration: "2 weeks",
     },
 
     mid_section_details: {
       challenge:
-        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+        "Designing for elderly users with varying levels of digital literacy and accessibility needs.",
       approach:
-        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+        "Used larger touch targets, clear typography, simplified flows, and minimal steps for key actions like booking and navigation.",
       outcome:
-        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+        "The app feels approachable and reassuring, enabling elderly users to travel with greater confidence and independence.",
     },
 
     final_thoughts:
-      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+      "Rail Yatri reinforced the value of empathetic design and how accessibility-first thinking can drastically improve user confidence.",
   },
   {
     projectNo: 9,
     slug: "glassdoor",
     title: "Glassdoor",
-    description: "Creative agency website redesign.",
+    description: "Glassdoor website redesign for better user experience.",
     thumbnail: "/images/projects/project9/thumbnail.png",
 
     header_details: {
       overview:
-        "X1 Studio is a creative agency website redesign focused on showcasing the studio’s work, design philosophy, and services in a visually engaging and professional manner. The goal was to strengthen brand perception while improving content clarity and navigation.",
-      role: "UI/UX software design",
-      platform: "Marketing Website",
+        "This project reimagines the Glassdoor website experience with a focus on improved usability, clarity, and trust. The goal was to help users explore company insights and reviews more effortlessly.",
+      role: "UI/UX Design",
+      platform: "Website Redesign",
       duration: "2 weeks",
     },
 
     mid_section_details: {
       challenge:
-        "Presenting diverse creative work without overwhelming visitors, while clearly communicating the studio’s value and expertise.",
+        "Organizing dense information like reviews, ratings, and salaries without overwhelming users.",
       approach:
-        "Adopted a clean, editorial-style layout with strong visual hierarchy, generous spacing, and focused storytelling through selected case highlights.",
+        "Redesigned layouts with clearer hierarchy, improved filtering, and scannable content sections.",
       outcome:
-        "The redesigned website offers a refined visual identity and improved navigation, helping visitors quickly understand the studio’s capabilities and creative approach.",
+        "Users can quickly find relevant insights and make informed career decisions with less cognitive effort.",
     },
 
     final_thoughts:
-      "Working on X1 Studio reinforced how visual restraint and clear storytelling can elevate brand perception. Prioritizing clarity over decoration helped create a more confident and professional presence.",
+      "This redesign highlighted how structure and hierarchy are essential when dealing with information-heavy platforms.",
   },
 ];

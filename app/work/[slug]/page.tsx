@@ -20,6 +20,8 @@ export default async function ProjectPage({ params }: Props) {
     notFound();
   }
 
+  const moreProjects = projects.filter((p) => p.slug !== slug).slice(0, 3);
+
   return (
     <div className="flex w-full flex-col items-center">
       {/* Navbar */}
@@ -32,7 +34,7 @@ export default async function ProjectPage({ params }: Props) {
       <ProjectImages project={project} />
 
       {/* more projects */}
-      <MoreProject />
+      <MoreProject moreProjects={moreProjects} />
     </div>
   );
 }

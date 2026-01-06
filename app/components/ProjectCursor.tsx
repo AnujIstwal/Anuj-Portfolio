@@ -1,16 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import gsap from "gsap";
 
 export default function ProjectCursor() {
-  const [mounted, setMounted] = useState(false);
-
   const cursorRef = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname();
-  console.log("pathname", pathname);
 
+  // Move cursor
   useEffect(() => {
     if ("ontouchstart" in window) return; // disable on touch
 
@@ -34,6 +32,19 @@ export default function ProjectCursor() {
       scale: 0.95,
     });
   }, [pathname]);
+
+  // 🔑 Hide on scroll
+  // useEffect(() => {
+  //   const hideCursor = () => {
+  //     gsap.set(cursorRef.current, {
+  //       opacity: 0,
+  //       scale: 0.95,
+  //     });
+  //   };
+
+  //   window.addEventListener("scroll", hideCursor, { passive: true });
+  //   return () => window.removeEventListener("scroll", hideCursor);
+  // }, []);
 
   return (
     <div

@@ -207,9 +207,9 @@ html {
 }
 
 .work-row {
-  @apply flex h-min w-full flex-col items-center justify-center gap-[10px] md:flex-row;
+  @apply relative flex h-min w-full flex-col items-center justify-center gap-[10px] md:flex-row;
 }
 
 .work-row-card {
-  @apply bg-border aspect-[unset] h-[342px] w-full flex-none rounded-[10px] md:aspect-[1.09816] md:h-auto md:flex-[1_0_0];
+  @apply bg-border relative aspect-[unset] h-[342px] w-full flex-none rounded-[10px] md:aspect-[1.09816] md:h-auto md:flex-[1_0_0];
 }

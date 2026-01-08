@@ -1,6 +1,7 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 import ClientRoot from "./components/ClientRoot";
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${richmond.variable} ${manrope.variable} antialiased`}>
         <ClientRoot />
+        <Analytics />
 
         <Navbar />
         {children}

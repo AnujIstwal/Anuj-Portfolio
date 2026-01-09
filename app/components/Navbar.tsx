@@ -49,14 +49,16 @@ function Navbar() {
       <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-center gap-[10px] px-[20px] py-6">
         {/* Logo */}
         <div className="flex flex-[1_0_0] items-center justify-start">
-          <Image
-            src="/images/logo.svg"
-            alt="Anuj logo"
-            width={72}
-            height={72}
-            className="h-auto"
-            priority
-          />
+          <Link href="/">
+            <Image
+              src="/images/logo.svg"
+              alt="Anuj logo"
+              width={72}
+              height={72}
+              className="h-auto"
+              priority
+            />
+          </Link>
         </div>
 
         {/* Desktop Nav */}

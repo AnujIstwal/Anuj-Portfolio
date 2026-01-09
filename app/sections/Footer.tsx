@@ -20,7 +20,7 @@ const Footer = () => {
               alt="Anuj – UI UX Designer"
               width={1000}
               height={1754}
-              className="max-w-92"
+              className="pointer-events-none max-w-92 select-none"
             />
           </div>
         </div>
@@ -40,10 +40,13 @@ const Footer = () => {
 
               {/* CTA */}
               <div className="h-[30px] w-auto">
-                <div className="border-app bg-bg/60 flex cursor-pointer items-center justify-center gap-[5px] rounded-full border px-4 py-2 backdrop-blur-md">
+                <Link
+                  href="/collaborate"
+                  className="border-app bg-bg/60 flex cursor-pointer items-center gap-[6px] rounded-full border px-4 py-2 backdrop-blur-md"
+                >
                   <span className="bg-accent h-[5px] w-[5px] rounded-full"></span>
                   <p>Collaborate</p>
-                </div>
+                </Link>
               </div>
             </div>
 

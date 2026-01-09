@@ -30,7 +30,7 @@ export default function CollaboratePage() {
             y: 30,
             opacity: 0,
           },
-          "-=0.4",
+          "-=.8",
         )
         .from(
           formRef.current,
@@ -38,7 +38,7 @@ export default function CollaboratePage() {
             y: 30,
             opacity: 0,
           },
-          "-=0.3",
+          "-=0.75",
         );
     },
     { scope: headerRef }, // GSAP auto-cleanup

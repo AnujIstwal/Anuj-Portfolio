@@ -3,8 +3,9 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
 import { Phone, Mail, MapPin } from "lucide-react";
+import { SubmitButton } from "./components/SubmitButtons";
+import Image from "next/image";
 
 export default function CollaboratePage() {
   const headerRef = useRef<HTMLDivElement | null>(null);
@@ -59,71 +60,92 @@ export default function CollaboratePage() {
         </div>
 
         {/* Content */}
-        <div className="mx-auto flex max-w-[800px] flex-col gap-[80px] md:flex-row md:items-start">
+        <div className="mx-auto flex max-w-[800px] flex-col gap-[80px] md:flex-col md:items-center">
           {/* Contact info */}
-          <div ref={contactRef} className="md:w-1/2">
-            <h2 className="mb-[20px] text-sm font-semibold tracking-wide uppercase">
-              Contact
-            </h2>
+          <div
+            ref={contactRef}
+            className="grid grid-cols-1 gap-[24px] sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {/* Phone */}
+            <div className="bg-bg border-border rounded-[24px] border p-[28px] text-center shadow-sm">
+              <div className="mx-auto mb-[16px] flex h-[60px] w-[60px] items-center justify-center rounded-full">
+                <Image
+                  src="/images/call-icon.png"
+                  alt="Phone Icon"
+                  width={60}
+                  height={60}
+                />
+              </div>
 
-            <ul className="space-y-[20px]">
-              <li className="flex items-center gap-[12px]">
-                <span className="flex h-8 w-8 items-center justify-center rounded border border-[#0c121e]/20">
-                  <Phone size={16} strokeWidth={1.5} />
-                </span>
-                <span>+91 89680 59548</span>
-              </li>
+              <p className="text-text text-sm font-semibold">Phone</p>
+              <p className="mt-[4px] text-sm text-black/50">
+                Mon–Fri from 8am to 10pm
+              </p>
 
-              <li className="flex items-center gap-[12px]">
-                <span className="flex h-8 w-8 items-center justify-center rounded border border-[#0c121e]/20">
-                  <Mail size={16} strokeWidth={1.5} />
-                </span>
-                <span>anujistwal80@gmail.com</span>
-              </li>
+              <a
+                href="tel:+918968059548"
+                className="mt-[12px] inline-block font-medium hover:underline"
+              >
+                +91 89680 59548
+              </a>
+            </div>
 
-              <li className="flex items-center gap-[12px]">
-                <span className="flex h-8 w-8 items-center justify-center rounded border border-[#0c121e]/20">
-                  <MapPin size={16} strokeWidth={1.5} />
-                </span>
-                <span>Haryana, India</span>
-              </li>
-            </ul>
+            {/* Email */}
+            <div className="bg-bg border-border rounded-[24px] border p-[28px] text-center shadow-sm">
+              <div className="mx-auto mb-[16px] flex h-[60px] w-[60px] items-center justify-center rounded-full">
+                <Image
+                  src="/images/email-icon.png"
+                  alt="Email Icon"
+                  width={60}
+                  height={60}
+                />
+              </div>
+
+              <p className="text-text text-sm font-semibold">Email</p>
+              <p className="mt-[4px] text-sm text-black/50">
+                We’ll get back to you
+              </p>
+
+              <a
+                href="mailto:anujistwal80@gmail.com"
+                className="mt-[12px] inline-block font-medium break-all hover:underline"
+              >
+                anujistwal80@gmail.com
+              </a>
+            </div>
+
+            {/* Location */}
+            <div className="bg-bg border-border rounded-[24px] border p-[28px] text-center shadow-sm">
+              <div className="mx-auto mb-[16px] flex h-[60px] w-[60px] items-center justify-center rounded-full">
+                <Image
+                  src="/images/location-icon.png"
+                  alt="Location Icon"
+                  width={60}
+                  height={60}
+                />
+              </div>
+
+              <p className="text-text text-sm font-semibold">Location</p>
+
+              <p className="text-text/70 mt-[12px] text-sm">Ambala Cantt</p>
+
+              <p className="text-text/70 mt-[1px] text-sm">Haryana, India</p>
+            </div>
           </div>
 
-          {/* Form */}
-          <form ref={formRef} className="w-full max-w-[500px] space-y-[32px]">
-            {/* inputs */}
-            <div>
-              <label className="block text-sm">Name</label>
-              <input
-                type="text"
-                className="mt-[8px] w-full border-b bg-transparent py-[6px] outline-none"
+          {/* Map Image */}
+          <div className="w-full">
+            <div className="relative w-full overflow-hidden rounded-[30px]">
+              <Image
+                src="/images/map.png"
+                alt="Map"
+                width={800}
+                height={400}
+                className="h-auto w-full object-cover"
+                priority
               />
             </div>
-
-            <div>
-              <label className="block text-sm">Email</label>
-              <input
-                type="email"
-                className="mt-[8px] w-full border-b bg-transparent py-[6px] outline-none"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm">Message</label>
-              <textarea
-                rows={4}
-                className="mt-[8px] w-full rounded border bg-transparent p-[12px] outline-none"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="bg-text text-bg rounded px-[24px] py-[10px]"
-            >
-              Send message
-            </button>
-          </form>
+          </div>
         </div>
       </section>
     </main>

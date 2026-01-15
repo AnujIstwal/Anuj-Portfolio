@@ -114,11 +114,11 @@ export default function About() {
                     <FiLinkedin size={16} strokeWidth={1.5} />
                   </span>
                   <Link
-                    href="https://www.linkedin.com/in/anuj-kumar-393196200/"
+                    href="https://www.linkedin.com/in/anuj-istwal/"
                     className="text-sm text-[#0c121e]/80 hover:text-[#0c121e] hover:underline"
                     target="_blank"
                   >
-                    linkedin/anuj-kumar
+                    linkedin/anuj-istwal
                   </Link>
                 </li>
 

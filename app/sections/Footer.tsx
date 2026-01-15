@@ -65,7 +65,7 @@ const Footer = () => {
                   <FiDribbble className="cursor-pointer" />
                 </Link>
                 <Link
-                  href="https://www.linkedin.com/in/anuj-kumar-393196200/"
+                  href="https://www.linkedin.com/in/anuj-istwal/"
                   target="_blank"
                 >
                   <FiLinkedin className="cursor-pointer" />

@@ -67,7 +67,7 @@ export default function CollaboratePage() {
             className="grid grid-cols-1 gap-[24px] sm:grid-cols-2 lg:grid-cols-3"
           >
             {/* Phone */}
-            <div className="bg-bg border-border rounded-[24px] border p-[28px] text-center shadow-sm">
+            <div className="bg-bg border-text/20 rounded-[24px] border p-[28px] text-center">
               <div className="mx-auto mb-[16px] flex h-[60px] w-[60px] items-center justify-center rounded-full">
                 <Image
                   src="/images/call-icon.png"
@@ -91,7 +91,7 @@ export default function CollaboratePage() {
             </div>
 
             {/* Email */}
-            <div className="bg-bg border-border rounded-[24px] border p-[28px] text-center shadow-sm">
+            <div className="bg-bg border-text/20 rounded-[24px] border p-[28px] text-center">
               <div className="mx-auto mb-[16px] flex h-[60px] w-[60px] items-center justify-center rounded-full">
                 <Image
                   src="/images/email-icon.png"
@@ -115,7 +115,7 @@ export default function CollaboratePage() {
             </div>
 
             {/* Location */}
-            <div className="bg-bg border-border rounded-[24px] border p-[28px] text-center shadow-sm">
+            <div className="bg-bg border-text/20 rounded-[24px] border p-[28px] text-center">
               <div className="mx-auto mb-[16px] flex h-[60px] w-[60px] items-center justify-center rounded-full">
                 <Image
                   src="/images/location-icon.png"

@@ -140,7 +140,7 @@ export default function About() {
                     <FiInstagram size={16} strokeWidth={1.5} />
                   </span>
                   <Link
-                    href="https://www.instagram.com/uiby.ajistwal/"
+                    href="https://www.instagram.com/uiby.anuj/"
                     className="text-sm text-[#0c121e]/80 hover:text-[#0c121e] hover:underline"
                     target="_blank"
                   >

@@ -56,7 +56,7 @@ const Footer = () => {
               <div className="color-text flex items-center gap-2">
                 <p>Follow: </p>
                 <Link
-                  href="https://www.instagram.com/uiby.ajistwal/"
+                  href="https://www.instagram.com/uiby.anuj/"
                   target="_blank"
                 >
                   <FiInstagram className="cursor-pointer" />

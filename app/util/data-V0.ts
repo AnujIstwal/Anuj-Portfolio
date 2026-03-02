@@ -217,30 +217,29 @@ export const projects = [
   },
   {
     projectNo: 7,
-    slug: "abun",
-    title: "Abun",
-    description:
-      "An AI-powered SEO and content automation platform built to scale organic growth.",
+    slug: "homio",
+    title: "Homio",
+    description: "A webapp for managing smart home devices.",
     thumbnail: "/images/projects/project7/thumbnail.png",
     header_details: {
       overview:
-        "Abun is an AI-driven SEO and content generation platform designed for marketers, founders, and agencies. It combines keyword research, AI writing, programmatic SEO, technical optimization, and automation into a single growth-focused system.",
+        "Homio is a smart home management web app that allows users to control and monitor connected devices from a single dashboard. The goal was to make smart living feel simple and reliable.",
       role: "UI/UX Design",
-      platform: "Web Application (SaaS)",
-      duration: "2 weeks",
+      platform: "Web Application",
+      duration: "3 weeks",
     },
 
     mid_section_details: {
       challenge:
-        "Designing a scalable interface for a feature-dense AI + SEO platform without overwhelming users, while maintaining clarity across research, writing, automation, and analytics workflows.",
+        "Managing multiple devices and controls without creating cognitive overload for users.",
       approach:
-        "Created a structured information architecture separating research, generation, automation, and performance tracking. Used progressive disclosure, modular dashboards, and strong visual hierarchy to support both beginners and power users.",
+        "Introduced a clear dashboard structure, logical grouping of devices, and familiar interaction patterns for quick control.",
       outcome:
-        "Improved navigational clarity, reduced friction in content generation workflows, and aligned the product experience with its positioning as a complete SEO growth engine.",
+        "Users can manage their smart home efficiently, with reduced friction and improved clarity across everyday actions.",
     },
 
     final_thoughts:
-      "This project reinforced the importance of simplifying complex AI systems into predictable workflows, where trust, transparency, and performance visibility directly influence user adoption and retention.",
+      "This project emphasized the importance of predictability and clarity in utility-driven products where speed and reliability matter most.",
   },
   {
     projectNo: 8,

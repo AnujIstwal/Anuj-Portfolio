@@ -83,7 +83,7 @@ const Hero = () => {
         {/* Background pattern (optional layer) */}
 
         {/* <div ref={bgPatternRef} className="absolute inset-0 -z-10 opacity-0"></div> */}
-        <div className="absolute inset-0 -z-10 opacity-0">
+        <div className="absolute inset-0 -z-10">
           <MeshGradient
             width="100vw"
             height="100vh"

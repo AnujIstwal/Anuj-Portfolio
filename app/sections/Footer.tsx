@@ -52,7 +52,7 @@ const Footer = () => {
 
             <div className="footer-bottom-2 flex-col gap-[10px] text-xs md:flex-row md:gap-[20px]">
               <div>anujistwal80@gmail.com</div>
-              <div>All rights reserved ©2025</div>
+              <div>All rights reserved ©2026</div>
               <div className="color-text flex items-center gap-2">
                 <p>Follow: </p>
                 <Link

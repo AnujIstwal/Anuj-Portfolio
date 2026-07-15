@@ -1,8 +1,9 @@
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 import Navbar from "@/app/components/Navbar";
 import Image from "next/image";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { MeshGradient } from "@paper-design/shaders-react";
 
 const Hero = () => {
   const heroImageRef = useRef<HTMLImageElement | null>(null);
@@ -80,9 +81,20 @@ const Hero = () => {
         </div>
 
         {/* Background pattern (optional layer) */}
-
         <div ref={bgPatternRef} className="absolute inset-0 -z-10 opacity-0">
-          <Image src="/images/bg-pattern.png" alt="" fill />
+          <MeshGradient
+            width="100vw"
+            height="100vh"
+            colors={["#f6f3ee", "#ffab5c", "#f6f3ee", "#f6f3ee", "#f6f3ee"]}
+            distortion={1}
+            swirl={0.62}
+            grainMixer={0}
+            grainOverlay={0}
+            speed={0.5}
+            scale={0.84}
+            rotation={90}
+          />
+          {/* <Image src="/images/bg-pattern.png" alt="" fill /> */}
         </div>
       </div>
     </section>

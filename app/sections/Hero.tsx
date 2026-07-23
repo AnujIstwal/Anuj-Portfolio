@@ -71,11 +71,11 @@ const Hero = () => {
         <div className="absolute bottom-0 left-1/2 z-10 -translate-x-1/2">
           <Image
             ref={heroImageRef}
-            src="/images/hero-image.png"
+            src="/images/hero-image-2026.png"
             alt="Anuj – UI UX Designer"
-            width={1160}
-            height={1754}
-            className="hero-image max-w-105 opacity-0"
+            width={914}
+            height={802}
+            className="hero-image max-w-175 opacity-0"
             loading="lazy"
           />
         </div>

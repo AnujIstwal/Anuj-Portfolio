@@ -52,7 +52,7 @@ function Subhero() {
         </div>
         <div className="pt-2.5">
           <p className="text-xl font-light tracking-widest uppercase">
-            anuj kumar
+            anuj istwal
           </p>
         </div>
       </div>

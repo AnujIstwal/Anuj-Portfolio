@@ -26,10 +26,10 @@ function Philosophy() {
         </div>
         <div className="flex h-min w-full items-center justify-center">
           <Image
-            src="/images/hero-image-2.png"
+            src="/images/hero-image-2-new.png"
             alt="Hero Image"
-            width={480}
-            height={400}
+            width={850}
+            height={643}
           />
         </div>
       </div>
